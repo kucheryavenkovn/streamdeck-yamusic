@@ -1,0 +1,73 @@
+{
+  "$schema": "https://schemas.elgato.com/streamdeck/plugins/manifest.json",
+  "UUID": "local.tux.yamusic",
+  "Name": "Yandex Music",
+  "Author": "Local tools",
+  "Description": "Yandex Music player: live window preview, track info and transport controls on Stream Deck.",
+  "Version": "0.1.0.0",
+  "SDKVersion": 2,
+  "CodePath": "bin/plugin.mjs",
+  "Nodejs": { "Version": "20" },
+  "Software": { "MinimumVersion": "6.6" },
+  "OS": [{ "Platform": "windows", "MinimumVersion": "10" }],
+  "Icon": "images/music",
+  "Category": "Yandex Music",
+  "CategoryIcon": "images/music",
+  "PropertyInspectorPath": "ui/player.html",
+  "Actions": [
+    {
+      "UUID": "local.tux.yamusic.window",
+      "Name": "Окно приложения",
+      "Icon": "images/music",
+      "Controllers": ["Encoder"],
+      "PropertyInspectorPath": "ui/window.html",
+      "States": [{ "Image": "images/music", "ShowTitle": false }],
+      "UserTitleEnabled": false,
+      "SupportedInMultiActions": false,
+      "Tooltip": "Живые снимки окна. По умолчанию — нижняя полоса Яндекс Музыки. Для всего табло добавьте на четыре валкодера.",
+      "Encoder": { "layout": "layouts/mixer.json", "TriggerDescription": { "Rotate": "1: перемотка ±5 с; 4: громкость Яндекс Музыки ±2%", "Push": "1: пауза/пуск; 4: mute Яндекс Музыки" } }
+    },
+    {
+      "UUID": "local.tux.yamusic.music-cover", "Name": "Музыка: обложка трека",
+      "Icon": "images/music", "Controllers": ["Keypad"], "PropertyInspectorPath": "ui/player.html",
+      "States": [{ "Image": "images/music", "ShowTitle": false }], "UserTitleEnabled": false, "SupportedInMultiActions": false,
+      "Tooltip": "Обложка текущего трека Яндекс Музыки. Кнопка-индикатор, без управления."
+    },
+    {
+      "UUID": "local.tux.yamusic.music-artist", "Name": "Музыка: исполнитель",
+      "Icon": "images/music", "Controllers": ["Keypad"], "PropertyInspectorPath": "ui/player.html",
+      "States": [{ "Image": "images/music", "ShowTitle": false }], "UserTitleEnabled": false, "SupportedInMultiActions": false,
+      "Tooltip": "Исполнитель текущего трека крупным текстом. Кнопка-индикатор, без управления."
+    },
+    {
+      "UUID": "local.tux.yamusic.music-previous", "Name": "Музыка: предыдущий трек",
+      "Icon": "images/music", "Controllers": ["Keypad"], "PropertyInspectorPath": "ui/player.html",
+      "States": [{ "Image": "images/music", "ShowTitle": false }], "UserTitleEnabled": false, "SupportedInMultiActions": false
+    },
+    {
+      "UUID": "local.tux.yamusic.music-play", "Name": "Музыка: пауза / пуск",
+      "Icon": "images/music", "Controllers": ["Keypad"], "PropertyInspectorPath": "ui/player.html",
+      "States": [{ "Image": "images/music", "ShowTitle": false }], "UserTitleEnabled": false, "SupportedInMultiActions": false
+    },
+    {
+      "UUID": "local.tux.yamusic.music-next", "Name": "Музыка: следующий трек",
+      "Icon": "images/music", "Controllers": ["Keypad"], "PropertyInspectorPath": "ui/player.html",
+      "States": [{ "Image": "images/music", "ShowTitle": false }], "UserTitleEnabled": false, "SupportedInMultiActions": false
+    },
+    {
+      "UUID": "local.tux.yamusic.music-repeat", "Name": "Музыка: повтор",
+      "Icon": "images/music", "Controllers": ["Keypad"], "PropertyInspectorPath": "ui/player.html",
+      "States": [{ "Image": "images/music", "ShowTitle": false }], "UserTitleEnabled": false, "SupportedInMultiActions": false
+    },
+    {
+      "UUID": "local.tux.yamusic.music-shuffle", "Name": "Музыка: перемешивание",
+      "Icon": "images/music", "Controllers": ["Keypad"], "PropertyInspectorPath": "ui/player.html",
+      "States": [{ "Image": "images/music", "ShowTitle": false }], "UserTitleEnabled": false, "SupportedInMultiActions": false
+    },
+    {
+      "UUID": "local.tux.yamusic.music-like", "Name": "Музыка: лайк",
+      "Icon": "images/music", "Controllers": ["Keypad"], "PropertyInspectorPath": "ui/player.html",
+      "States": [{ "Image": "images/music", "ShowTitle": false }], "UserTitleEnabled": false, "SupportedInMultiActions": false
+    }
+  ]
+}

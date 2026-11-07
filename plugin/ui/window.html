@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><title>Окно приложения</title>
+<style>body{background:#2d2d2d;color:#ddd;font:12px sans-serif;padding:10px}label{display:block;margin:12px 0 4px}select,button{width:100%;padding:6px;background:#444;color:white;border:1px solid #666}p{line-height:1.5}#status{color:#fc6;overflow-wrap:anywhere}</style></head>
+<body>
+<p>Снимки окна, примерно 2 кадра/с. Сверху — бегущая строка «исполнитель — трек» и время «прошло / всего».</p>
+<label for="window">Окно</label><select id="window"><option value="">Автоматически: Яндекс Музыка</option></select>
+<button id="refresh">Обновить список окон</button>
+<label for="mode">Область окна</label><select id="mode"><option value="bottom">Нижняя полоса (плеер)</option><option value="top">Верхняя полоса</option><option value="center">Центральная полоса</option><option value="fit">Всё окно целиком (мелко)</option></select>
+<label for="span">Размер</label><select id="span"><option value="true">Всё табло — 4 действия</option><option value="false">Одна секция — 200 × 100</option></select>
+<label for="dialRole">Валкодер (управляет Яндекс Музыкой)</label><select id="dialRole"><option value="auto">По позиции: 1 — перемотка, 4 — громкость</option><option value="seek">Перемотка ±5 с; нажатие — пауза/пуск</option><option value="volume">Громкость ±2%; нажатие — mute</option><option value="none">Без управления</option></select>
+<p>Перемотка и кнопки требуют совместимого интерфейса Яндекс Музыки. Громкость меняется только в её аудиосессии Windows. Вращение с зажатой ручкой игнорируется; касания картинки не отправляют клики в окно.</p>
+<p>Для картинки на всю ширину добавьте это действие на все четыре валкодера и выберите одинаковые настройки. Каждый покажет свою четверть. Старый профиль не меняйте — используйте новую страницу/профиль.</p>
+<p>Окно должно быть открыто и не свёрнуто; перекрывать его другими окнами можно. Некоторые приложения дают чёрный кадр. После перезапуска вручную выбранное окно может потребоваться выбрать заново. Снимки не сохраняются и не отправляются в сеть.</p>
+<p id="status"></p><script src="window.js"></script></body></html>

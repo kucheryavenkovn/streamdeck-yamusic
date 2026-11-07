@@ -1,0 +1,7 @@
+node_modules/
+native/**/bin/
+native/**/obj/
+plugin/bin/
+dist/
+backups/
+*.log

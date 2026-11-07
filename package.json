@@ -1,0 +1,13 @@
+{
+  "name": "streamdeck-app-mixer",
+  "version": "0.1.13",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "build": "node scripts/build.mjs",
+    "preview": "node scripts/preview.mjs"
+  },
+  "dependencies": { "ws": "8.22.1" },
+  "devDependencies": { "@elgato/cli": "1.7.1" }
+}
